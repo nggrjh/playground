@@ -6,7 +6,6 @@ import (
 
 func Test_binarySearch(t *testing.T) {
 	t.Parallel()
-	
 	type args struct {
 		array []int
 		value int
@@ -55,7 +54,6 @@ func Test_binarySearch(t *testing.T) {
 		tt := test
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
-			
 			got, err := binarySearch(tt.args.array, tt.args.value)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("binarySearch() error = %v, wantErr %v", err, tt.wantErr)
