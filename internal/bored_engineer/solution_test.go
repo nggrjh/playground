@@ -47,3 +47,38 @@ func TestBoredEngineerWorkingHours(t *testing.T) {
 		})
 	}
 }
+
+func TestBoredEngineerRearrangeWorkingHours(t *testing.T) {
+	type args struct {
+		tasks []int
+		gap   int
+	}
+	tests := map[string]struct {
+		args args
+		want int
+	}{
+		"case_1": {
+			args: args{
+				tasks: []int{1, 2, 3, 1, 1, 2, 1},
+				gap:   2,
+			},
+			want: 1000000,
+		},
+		"case_3": {
+			args: args{
+				tasks: []int{1, 1, 1, 1, 1, 1, 1, 1},
+				gap:   2,
+			},
+			want: 22,
+		},
+	}
+	for name, test := range tests {
+		nm := name
+		tt := test
+		t.Run(nm, func(t *testing.T) {
+			if got := playground.BoredEngineerRearrangeWorkingHours(tt.args.tasks, tt.args.gap); got != tt.want {
+				t.Errorf("BoredEngineerRearrangeWorkingHours() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
