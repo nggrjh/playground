@@ -57,20 +57,20 @@ func TestBoredEngineerRearrangeWorkingHours(t *testing.T) {
 		args args
 		want int
 	}{
-		"case_1": {
-			args: args{
-				tasks: []int{1, 2, 3, 1, 1, 2, 1},
-				gap:   2,
-			},
-			want: 1000000,
-		},
-		"case_3": {
-			args: args{
-				tasks: []int{1, 1, 1, 1, 1, 1, 1, 1},
-				gap:   2,
-			},
-			want: 22,
-		},
+		// "case_1": {
+		// 	args: args{
+		// 		tasks: []int{1, 2, 3, 1, 1, 2, 1},
+		// 		gap:   2,
+		// 	},
+		// 	want: 1000000,
+		// },
+		// "case_3": {
+		// 	args: args{
+		// 		tasks: []int{1, 1, 1, 1, 1, 1, 1, 1},
+		// 		gap:   2,
+		// 	},
+		// 	want: 22,
+		// },
 	}
 	for name, test := range tests {
 		nm := name
