@@ -1,9 +1,6 @@
 package datastructures
 
-import (
-	"errors"
-)
-
+import "errors"
 
 func binarySearch(array []int, value int) (int, error) {
 	lower := 0
@@ -24,6 +21,3 @@ func binarySearch(array []int, value int) (int, error) {
 
 	return 0, errors.New("not found")
 }
-
-
-
