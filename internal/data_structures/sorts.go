@@ -48,3 +48,11 @@ func insertionSort(array []int) []int {
 
 	return array
 }
+
+func quickSort(array []int) []int {
+	return array
+}
+
+func quickSelect(array []int) []int {
+	return array
+}
